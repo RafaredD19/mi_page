@@ -189,7 +189,118 @@ main{
 #icon_menu{
     display: none;
 }
-@media(max-width:1024px){
+
+@media (max-width: 1024px) {
+    .menu {
+        height: 0;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.5);
+        transition: height 300ms ease-out;
+    }
+
+    .menu.nav-open {
+        height: 235px;
+    }
+
+    .menu nav ul {
+        padding: 20px 0px;
+        flex-direction: column;
+        background: #da721e;
+        transition: opacity 300ms;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .menu.nav-open nav ul {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .text__information-cover h1 {
+        font-size: 40px;
+    }
+
+    .text__information-cover p {
+        font-size: 16px;
+    }
+
+    .banner__text {
+        font-size: 22px;
+    }
+
+    /* Otros ajustes necesarios */
+}
+
+
+@media (max-width: 950px) {
+    .text__information-cover {
+        width: 100%;
+    }
+
+    .media__cover {
+        display: none;
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    #icon_fire {
+        display: none;
+    }
+
+    #icon-hear {
+        left: 0;
+        width: 10px;
+        height: 10px;
+        margin-top: 100px;
+    }
+
+    .banner__text {
+        width: 100%;
+    }
+
+    .banner__text p {
+        font-size: 1px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media(max-width:1024px){
 .container__header,
 main{
         padding: 20px;
@@ -249,7 +360,7 @@ main{
 }
 }
 
-@media(max-width:650px){
+@media(max-width:950px){
     .text__information-cover{
         width: 100%;
     }
@@ -263,12 +374,19 @@ main{
     #icon_fire{
         display: none;
     }
-    #icon_hear{
+    #icon-hear{
         left: 0;
+        width: 10px;
+        height: 10px;
+        margin-top: 100px;
     }
  .banner__text{
     width:100%;
-    margin-left: 80px;
+ }
+
+ .banner__text p{
+    font-size: 1px;
+    
     
  }
-}
+} */
