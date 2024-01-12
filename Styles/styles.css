@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: #f5f5f5;
+}
+
+header{
+    background: #f5f5f5;
+    height:100px;
+}
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+
+}
+.menu nav ul{
+    display: flex;
+}
+.menu nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+}
+.menu nav ul li {
+    font-size: 20px;
+    text-decoration: none;
+    color: blueviolet;
+    transition: opacity 300ms;
+}
+.menu nav ul li a:hover{
+    opacity: 0.9;
+}
+
+.btn__header-register , .btn__register-cover
+{
+    padding: 14px 60px;
+    border: none;
+    background: #da721e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn__header-register:hover, .btn__register-cover:hover{
+    background: #f17747;
+    color: black;
+
+}
+
+/*portada ------ gaa*/
+
+main{
+    max-width: 1200px;
+    height: calc(100vh + 800px);
+    padding: 40px;
+    margin: auto;
+}
+
+.cover{
+    display:flex;
+    justify-content: center;
+    margin-top: 60px;
+
+}
+.text__information-cover{
+    width: 50%;
+
+}
+.text__information-cover h1{
+    font-size: 50px;
+
+    
+}
+.text__information-cover p{
+    font-size: 18px;
+    margin-top: 40px;
+    padding: 5px;
+    margin-bottom: 50px;
+    line-height: 30px;
+    text-align: justify;
+}
+.buttons__cover{
+    display:flex;
+    margin-top: -40px;
+}
+.btn__readmore{
+    padding: 14px 40px;
+    border: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background, color , 300ms;
+}
+.btn__readmore{
+    background-color: antiquewhite;
+}
+.media__cover{
+    width: 50%;
+    margin-top: -100px;
+    height: auto;
+}
+
+/* el banner  */
+
+.container__baner{
+    margin-top: 60px;
+    
+    
+
+}
+
+.banner{
+    height: 350px;
+    display:flex;
+    align-items: center;
+    background: #290149;
+    position: relative;
+    border-radius: 20px;
+}
+.banner__icon-hear{
+    width: 35%;
+    height: 100%;
+
+}
+
+.banner__text {
+    width: 60%;
+    position: relative;
+    padding: 40px;
+}
+.banner__text h3{
+    color: #f3e2d4;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.banner__text a{
+    text-decoration: none;
+    display: block;
+    margin-top: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 300ms;
+}
+
+.banner__text a:hover{
+    background: #f17747;
+}
+.banner__icon-fire{
+    height: 100%;
+    position: absolute;
+    right: 20px;
+    overflow: hidden;
+}
+
+#icon_fire{
+    height: 500px;
+    position: relative;
+    margin-top: -300px;
+    opacity: 0.4;
+}
+
+#icon-hear{
+    width: 400px;
+    margin-top: 80px;
+    position: relative;
+    filter: drop-shadow(-40px 0px 30px rgba(0,0,0,0.5));
+}
+
+#icon_menu{
+    display: none;
+}
+@media(max-width:1024px){
+.container__header,
+main{
+        padding: 20px;
+}
+#icon_menu{
+    display: block;
+    cursor:pointer;
+    font-size: 24px;
+
+}
+
+.header__register{
+    display: none;
+}
+.menu{
+    height: 0px;
+    position: absolute;
+    right: 20px;
+    top:70px;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+    transition: all 300ms;
+}
+    
+.menu nav ul {
+    padding: 20px 0px;
+    flex-direction: column;
+    background: #da721e;
+}
+.menu nav ul li {
+    position: 10px 40px;
+}
+
+
+.mostrar_menu{ 
+    height: 235px;
+}
+
+.text__information-cover h1{
+    font-size: 40px;
+}
+
+.text__information-cover p{
+    font-size: 16px;
+}
+
+.banner__text{
+    font-size: 22px;
+}
+
+#icon_hear{
+    left: -80px;
+}
+.banner__icon-fire{
+    right: -20px;
+}
+}
+
+@media(max-width:650px){
+    .text__information-cover{
+        width: 100%;
+    }
+    .media__cover{
+        display: none;
+    }
+    .banner{
+        height: auto;
+    }
+
+    #icon_fire{
+        display: none;
+    }
+    #icon_hear{
+        left: 0;
+    }
+ .banner__text{
+    width:100%;
+    margin-left: 80px;
+    
+ }
+}
