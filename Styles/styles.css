@@ -5,12 +5,17 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-body{
-    background: #C4D7D2;
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 500%;
+    background-color: #183B53;
+    z-index: -1; /* Ajusta el índice z para que esté detrás del contenido principal */
 }
 
+
 header{
-    background: #183B53;
+    /* background: #183B53; */
     height:100px;
     padding: 10px;
 }
@@ -35,6 +40,7 @@ header{
 
 .menu nav ul{
     display: flex;
+    
 }
 .menu nav ul li {
     list-style: none;
@@ -77,6 +83,7 @@ main{
     height: calc(100vh + 800px);
     padding: 40px;
     margin: auto;
+    color: #00070E;
 }
 
 .cover{
@@ -234,8 +241,6 @@ display: none;
 
 
 
-
-
 /* PARA MOVIL GAAAAAAAAAAAAAAAAAAAAAAAAAAAA QUE GOZU EL RESPONSIVO */
 
 
@@ -273,7 +278,10 @@ display: none;
         flex-direction: column;
         background: #da721e;
         border-radius: 20px;
-        margin-top: 25px;
+        margin-top: 40px;
+        font-size: medium;
+
+
     }
 
     .menu nav ul li {
@@ -314,7 +322,16 @@ display: none;
         width: 100%;
         text-align: center; /* Alinea el texto al centro */
     }
+    .menu nav ul {
+        padding: 20px auto  ;
+        flex-direction:row;
+        background: #da721e;
+        border-radius: 20px;
+        margin-top: 40px;
+        font-size: medium;
 
+
+    }
     .media__cover {
         display: none;
     }
