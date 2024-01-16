@@ -9,7 +9,7 @@
     position: absolute;
     width: 100%;
     height: 500%;
-    background-color: #183B53;
+    background-color:#183B53;
     z-index: -1; /* Ajusta el índice z para que esté detrás del contenido principal */
 }
 
@@ -18,6 +18,9 @@ header{
     /* background: #183B53; */
     height:100px;
     padding: 10px;
+    background-color: rgba(0, 0,0, 0);
+    backdrop-filter: blur(10px);
+    
 }
 
 .container__header{
@@ -29,6 +32,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
 .logo img{
     width: 110px;
@@ -54,21 +58,25 @@ header{
 }
 .menu nav ul  :hover{
     opacity: 0.9;
-    color: #C4D7D2 ;
+    color: #da721e ;
 }
 
 .btn__header-register , .btn__register-cover
 , .btn__readmore{
-    padding: 14px 60px;
-    border: none;
+    padding: 14px 60px ;
+    border-radius: 10px;
     background: #749D96;
     color: #C4D7D2;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
 }
 .btn__header-register:hover , .btn__readmore{
-    background: #C4D7D2;
+    background: #da721e;
     color: #00070E;
+    
+    margin-left: 20px;
 }
 
 .btn__register-cover:hover{
@@ -83,7 +91,7 @@ main{
     height: calc(100vh + 800px);
     padding: 40px;
     margin: auto;
-    color: #00070E;
+    color: #749D96;
 }
 
 .cover{
@@ -94,6 +102,10 @@ main{
 }
 .text__information-cover{
     width: 50%;
+    background-color: rgba(0, 0,0, 0); /* Cambia los valores de rojo, verde, azul y opacidad según tus preferencias */
+    margin-top: 24px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
 
 }
 .text__information-cover h1{
@@ -103,40 +115,44 @@ main{
 }
 .text__information-cover p{
     font-size: 18px;
-    margin-top: 40px;
-    padding: 5px;
+    margin-top: 20px;
+    padding: 10px;
     margin-bottom: 50px;
     line-height: 30px;
     text-align: justify;
 }
-.buttons__cover{
-    display:flex;
-    margin-top: -40px;
+.buttons_cover {
+    display: flex;
+    padding: 20px;
+    text-decoration: none;
+    width: auto;
+    border-radius: 10px;
 }
-.btn__readmore{
+
+.btn__readmore {
     padding: 14px 40px;
-    border: none;
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
     color: black;
     font-weight: 500;
-    
     font-size: 16px;
     cursor: pointer;
     margin-left: 10px;
-    transition: background, #00070E , 300ms;
-}
-.btn__readmore{
-    background-color: antiquewhite;
+    transition: background, #00070E, 300ms;
 }
 .media__cover{
     width: 50%;
     margin-top: -100px;
     height: auto;
+    text-decoration: none;
 }
 
 /* el banner  */
 
 .container__baner{
     margin-top: 60px;
+    text-decoration: none;
     
     
 
@@ -146,7 +162,7 @@ main{
     height: 350px;
     display:flex;
     align-items: center;
-    background: #00070E;
+    background: #183B53;
     position: relative;
     border-radius: 20px;
 }
@@ -187,7 +203,7 @@ main{
 }
 
 .banner__text a:hover{
-    background: #749D96
+    background: #da721e
 }
 .banner__icon-fire{
     height: 100%;
@@ -314,6 +330,16 @@ display: none;
     .banner__icon-fire {
         right: -20px;
     }
+
+    .buttons_cover {
+        flex-direction: column; /* Cambiar a una disposición vertical */
+        align-items: center; /* Centrar los elementos horizontalmente */
+    }
+
+    .btn__readmore {
+        margin-top: 10px; /* Agregar un espacio entre los botones */
+        margin-left: 0; /* Alinear los botones al centro */
+    }
 }
 
 
@@ -322,16 +348,22 @@ display: none;
         width: 100%;
         text-align: center; /* Alinea el texto al centro */
     }
-    .menu nav ul {
+    .menu nav ul  {
         padding: 20px auto  ;
-        flex-direction:row;
+        flex-direction:column;
+        display: flex;
         background: #da721e;
         border-radius: 20px;
         margin-top: 40px;
-        font-size: medium;
-
-
+        font-size: small;
     }
+
+    .logo img{
+        width: 75px;
+        height: 75px;
+    }
+
+    
     .media__cover {
         display: none;
     }
@@ -346,11 +378,12 @@ display: none;
 
     .banner__text {
         width: 100%;
-        text-align: center; /* Alinea el texto al centro */
+         /* Alinea el texto al centro */
     }
 
     .banner__text h2 {
         margin: 15px 0; /* Ajusta el espacio alrededor del texto */
+        text-align: left;
     }
 
     .banner__text h2 {
@@ -361,6 +394,10 @@ display: none;
 
     .buttons_cover {
         text-align: center; /* Alinea los botones al centro */
+    }
+
+    .text__information-cover p {
+        text-align: left;
     }
 }
 
