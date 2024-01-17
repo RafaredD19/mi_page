@@ -109,23 +109,38 @@ main{
 
 }
 .text__information-cover h1{
-    font-size: 40px;
+   
     display: inline-block;
+    word-wrap: break-word;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 0.15em solid #da721e; /* Línea que simula el cursor */
+    border-right: 0.09em solid #da721e; /* Línea que simula el cursor */
     margin: 0;
     padding: 20px;
-    animation: typing 4s steps(50) infinite;
+    animation: typing 5s steps(40) infinite, blinkCursor 4s steps(40) infinite;
+    padding: 2vw;
+    font-size: 4vw;
   }
 
 
-@keyframes typing {
-    from {
+  @keyframes typing {
+    0% {
       width: 0;
     }
-    to {
+    80%, 100% {
       width: 100%;
+    }
+    100.1%, 100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blinkCursor {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #da721e;
     }
   }
 .text__information-cover p{
@@ -248,24 +263,177 @@ main{
 
 /* SOBRE MI  */
 
+:root{
+    --aqua-color :#97FFF4;
+    --background-color : #183B53;
+}
+.img-box{
+    width: 560px;
+    height: 560px;
+    position: relative;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* El div img-box tomará el espacio disponible */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+}
+.img-box img{
+    border: 5px solid #C4D7D2;
+    border-radius: 50%;
+    box-shadow: 10px 10px 50px white;
+    background-color: var(--aqua-color);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    
+}
+.text-box{
+    width: 50%;
+    margin: 20px 0px 0px 80px;
+    text-align: start;
+    position: relative;
+    color: white;
+    flex: 1; /* El div img-box tomará el espacio disponible */
+    padding: 0px; /* Ajusta el relleno según sea necesario */
+}
+.text-box .skills{
+    color: var(--aqua-color);
+}
+.text-box h1{
+    font-size: 32px;
+    font-weight: 300;
+}
+.text-box .icon-box{
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0px;
+}
+.text-box .icon-box i{
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 6px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+.text-box .icon-box i:hover{
+    background-color: white;
+    color: var(--background-color);
+}
+.text-box button{
+    position: relative;
+    width: 150px;
+    height: 32px;
+    background: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+}
+.text-box .downloadBtn{
+    margin-right: 15px;
+    color: black;
+}
+.text-box button::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    transition: .5s;
+    z-index: -1;
+}
+.text-box .downloadBtn::before{
+    right: 0;
+}
+.text-box .downloadBtn:hover{
+    color: white;
+}
+.text-box .downloadBtn:hover::before{
+    left: 0;
+    width: 0;
+}
+.text-box .contactBtn::before{
+    right: 0;
+    width: 0;
+}
+.text-box .contactBtn:hover{
+    color: black;
+}
+.text-box .contactBtn:hover::before{
+    left: 0;
+    width: 100%;
+}
+@keyframes loadAnimation {
+    100%{
+        width: 0;
+    }
+}
 
+.text-box::before,
+.img-box::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    transition: .5s;
+    z-index: 2;
+    animation: loadAnimation 1s ease forwards;
+}
+.text-box::before{
+    animation-delay:1s ;
+}
+.img-box::before{
+    animation-delay: 2s;
+}
+.container {
+    display: flex;
+    margin-top: 100px;
+}
 
+/* SOBRE MI RESPONSIVO  */
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    .text-box,
+    .img-box {
+        width: 50%;
+    }
 
+    .img-box {
+        margin-top: 20px;
+        
+    }
+    .img-box img {
+        margin-top: 20px;
+        width: 220px;
+        height: 220px;
+    }
 
+    .text-box h1 {
+        font-size: 20px;
+    }
 
+    .text-box .icon-box {
+        flex-wrap: wrap;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    .text-box .icon-box i {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
 
 
 

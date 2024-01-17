@@ -18,3 +18,11 @@ window.onscroll = function() {
     elemento1.style.bottom = posicion * 0.3 + "px";
     elemento2.style.top = posicion * 0.3 + "px";
 };
+
+var typed = new Typed(".skills", {
+    strings: ["Frontend developer", "Youtuber", "Ui designer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
