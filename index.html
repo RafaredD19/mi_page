@@ -5,6 +5,8 @@
     <title>Mi página</title>
     <script src="https://kit.fontawesome.com/f525aa11aa.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
     <link rel="stylesheet" href="./Styles/styles.css">
 </head>
 <body >
@@ -40,7 +42,7 @@
     <main >
         <div class="cover" >
             <div class="text__information-cover">
-                <h1>¡HOLA! SOY RAFAEL.</h1>
+                <h1>¡HOLA! Soy Desarrollador Web</h1>
                 <p> Este es mi sitio web, creado con atención y profesionalismo. 
                     Aquí encontrarás conocimientos acumulados a lo largo de mi carrera como 
                     desarrollador y mi experiencia como estudiante de Ingeniería de Sistemas 
@@ -48,7 +50,7 @@
                     se unen. ¡Espero que encuentres lo que buscas!
                 </p>
                 <div class="buttons_cover">
-                    <input type="button" class="btn__register-cover" value="Contáctame">
+                 <a href="https://w.app/bVuRon">   <input type="button" class="btn__register-cover" value="Contáctame"></a>
                     <a href="https://gitlab.com/rosselgalarzarafael"><input type="button" class="btn__readmore" value="Mi Portafolio"></a>
                 </div>
 
@@ -81,37 +83,33 @@
         </div>
   
     <!-- SOBRE MI  -->
-    <div class="container">
-        <div class="text-box">
-            <h1>Desarrollador frontend</h1>
-            <h1>
-                <span class="skills"></span>
-            </h1>
-            <p>Soy un desarrollador frontend junior especializado en la creación de sitios y plataformas web. Destaco en el uso de 
-                frameworks como Angular y Vue, así como en tecnologías web como JavaScript, HTML y CSS. Mi conjunto de habilidades 
-                incluye el manejo eficiente de Git para control de versiones, la implementación de Docker para la gestión de entornos 
-                y la utilización de PM2 para la administración de procesos en aplicaciones web.
-                 Además, tengo experiencia sólida en el desarrollo de backends y la manipulación de datos con Python. Utilizo Python 
-                    para tareas como análisis de datos, scripting y desarrollo de aplicaciones backend. Complemento estos análisis con 
-                    herramientas como R para estadísticas y Power BI para visualizaciones efectivas.
-                Actualmente, estudio Ingeniería de Sistemas e Informática y resido en Lima, Perú. Estoy comprometido con el crecimiento
-                 continuo en el ámbito del desarrollo frontend y el análisis de datos.</p>
-             
-            <div class="icon-box">
+   |<div class="container">
+    <div class="column">
+        <div class="title">RAFAEL ANDRES ROSSEL GALARZA</div>
+        <div class="description">Soy un desarrollador frontend junior especializado en la creación de sitios y plataformas web. 
+            Destaco en el uso de frameworks como Angular y Vue, así como en tecnologías web como JavaScript, HTML y CSS. Mi 
+            conjunto de habilidades incluye el manejo eficiente de Git para control de versiones, la implementación de Docker para 
+            la gestión de entornos y la utilización de PM2 para la administración de procesos en aplicaciones web. Además, tengo 
+            experiencia sólida en el desarrollo de backends y la manipulación de datos con Python. Utilizo Python para tareas como 
+            análisis de datos, scripting y desarrollo de aplicaciones backend. Complemento estos análisis con herramientas como R 
+            para estadísticas y Power BI para visualizaciones efectivas. Actualmente, estudio Ingeniería de Sistemas e Informática
+             y resido en Lima, Perú.
+             Estoy comprometido con el crecimiento continuo en el ámbito del desarrollo frontend y el análisis de datos.</div>
 
-                <ul>
+             <div class="icon-box">
+
+                
                     <i class='bx bxl-facebook'></i>
                     <i class='bx bxl-linkedin'></i>
                     <i class='bx bxl-twitter'></i>
-                </ul>
-              
             </div>
-            <button class="downloadBtn">Download cv</button>
+            <a href="./CVRafaelAndres.pdf" download class="downloadBtn">  <button class="downloadBtn" id="downloadBtn" >Download cv</button></a>
+          
             <button class="contactBtn">Contact me</button>
-        </div>
-        <div class="img-box">
-            <img src="./img/perfil.png" draggable="false" alt="Rafael Rossel Galarza">
-        </div>
+    </div>
+    <div class="column">
+        <img class="profile-pic" src="./img/perfil.png" alt="Tu Foto">
+    </div>
     </div>
     
     </main>

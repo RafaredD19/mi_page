@@ -19,10 +19,14 @@ window.onscroll = function() {
     elemento2.style.top = posicion * 0.3 + "px";
 };
 
-var typed = new Typed(".skills", {
-    strings: ["Frontend developer", "Youtuber", "Ui designer"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
+document.getElementById('downloadBtn').addEventListener('click', function () {
+    // Código para generar el PDF
+    var pdf = new jsPDF();
+    pdf.text('Tu Nombre', 20, 20);
+    pdf.text('Soy un desarrollador frontend junior...', 20, 30);
+
+    // Puedes agregar más contenido al PDF según sea necesario
+
+    // Guardar el PDF como "cv.pdf"
+    pdf.save('CVRafaelAndres.pdf');
 });
