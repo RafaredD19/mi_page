@@ -109,10 +109,25 @@ main{
 
 }
 .text__information-cover h1{
-    font-size: 50px;
+    font-size: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #da721e; /* Línea que simula el cursor */
+    margin: 0;
+    padding: 20px;
+    animation: typing 4s steps(50) infinite;
+  }
 
-    
-}
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 .text__information-cover p{
     font-size: 18px;
     margin-top: 20px;
@@ -230,20 +245,61 @@ main{
     display: none;
 }
 
-/* SOBRE MI  */
-.perfil {
-    display: grid;
-    grid-template-columns: 500px 300px;
-    grid-template-rows: 200px 750px;
-}
-.imagen-banner img {
-    max-width: 100%;
-    height: auto;
-}
 
-.hero{
-display: none;
-}
+/* SOBRE MI  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -311,9 +367,26 @@ display: none;
 
     
 
-    .text__information-cover h1 {
-        font-size: 40px;
-    }
+    .text__information-cover h1{
+        font-size: 20px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 0.15em solid #da721e; /* Línea que simula el cursor */
+        margin: 0;
+        padding: 20px;
+        animation: typing 4s steps(50) infinite;
+      }
+    
+    
+    @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
 
     .text__information-cover p {
         font-size: 16px;
